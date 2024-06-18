@@ -1,0 +1,27 @@
+artifact_path: model
+flavors:
+  python_function:
+    data: model.xgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.9.19
+  xgboost:
+    code: null
+    data: model.xgb
+    model_class: xgboost.sklearn.XGBRegressor
+    model_format: xgb
+    xgb_version: 2.0.3
+mlflow_version: 2.13.1
+model_size_bytes: 108524
+model_uuid: 5e8b8e57bc5b49bca99776816baa398b
+run_id: 94c58fb6b09d4b8780ae20bb071fb7e8
+signature:
+  inputs: '[{"type": "double", "name": "passenger_count", "required": true}, {"type":
+    "double", "name": "trip_distance", "required": true}, {"type": "double", "name":
+    "fare_amount", "required": true}, {"type": "double", "name": "tip_amount", "required":
+    true}, {"type": "double", "name": "payment_type", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2024-06-18 14:04:45.187556'
